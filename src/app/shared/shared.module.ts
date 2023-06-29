@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { RouterModule } from '@angular/router';
-import { ContactComponent } from './pages/contact/contact.component';
-import { SearchBoxComponent } from './components/search-box/search-box.component';
 
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { CommonModule } from '@angular/common';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     HomePageComponent,
     SidebarComponent,
     SearchBoxComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     ContactComponent,
     HomePageComponent,
     SidebarComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LoadingSpinnerComponent,
   ]
 })
 export class SharedModule { }

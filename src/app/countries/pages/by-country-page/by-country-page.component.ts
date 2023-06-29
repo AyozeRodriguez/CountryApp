@@ -13,8 +13,11 @@ export class ByCountryPageComponent implements OnInit {
   constructor( private countryService:CountriesService ) { }
 
   public country: Country[] = [];
+  public initialValue: string = '';
 
   ngOnInit(): void {
+    this.initialValue = this.countryService.cacheStore.byCountries.term
+    this.country = this.countryService.cacheStore.byCountries.countries;
   }
 
   searchByCountry(term: string){
